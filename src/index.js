@@ -15,7 +15,7 @@ export default function nedb({filename, inMemoryOnly}) {
     },
 
     setItem(key, value, cb) {
-      db.update({key}, {value}, {upsert: true}, err => cb(err));
+      db.update({key}, {key, value}, {upsert: true}, err => cb(err));
     },
 
     removeItem(key, cb) {
