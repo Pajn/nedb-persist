@@ -1,6 +1,6 @@
 {
   "name": "nedb-persist",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A NeDb storage for redux-persist",
   "main": "lib/index.js",
   "typings": "typings.d.ts",
