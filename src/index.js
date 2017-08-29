@@ -1,8 +1,6 @@
 import Datastore from 'nedb';
 
-export default function nedb({filename, inMemoryOnly}) {
-  const db = new Datastore({filename, inMemoryOnly, autoload: true});
-
+export default function nedb(db) {
   return {
     getItem(key, cb) {
       db.findOne({key}, (err, doc) => {

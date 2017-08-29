@@ -1,6 +1,8 @@
-export default function nedb(settings: {filename: string}|{inMemoryOnly: boolean}): {
-  getItem(key, cb: Function),
-  setItem(key, value, cb: Function),
-  removeItem(key, cb: Function),
-  getAllKeys(cb: Function),
+import Datastore from 'nedb'
+
+export default function nedb(db: Datastore): {
+  getItem(key, cb: (err: any, value: any) => any),
+  setItem(key, value, cb: (err: any) => any),
+  removeItem(key, cb: (err: any) => any),
+  getAllKeys(cb: (err: any) => any),
 };
